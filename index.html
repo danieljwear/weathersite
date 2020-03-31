@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  
+  <title>Today's Forecast | Idaho's Most Accurate Weather Forecast</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content=" Be Ready with Today's Forecast Idaho's Most Accurate Weather Forecast">
+  <meta name="author" content="Daniel Wear">
+  <meta name="keyword" content="Forecast, Idaho, Weather, Today, Storms">
+  <meta name="robots" content="index, follow">
+
+
+   
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/small.css" rel="stylesheet">
+    <link href="css/medium.css" rel="stylesheet">
+    <link href="css/large.css" rel="stylesheet">
+</head>
+
+  <body>
+    <header>
+      <img src="img/logo.gif" alt="Weather  image of cloud">
+      <div class="heading">
+        <h1>Your Accurate Forecast</h1><h2>Storm Center</h2>
+        
+      </div>
+    </header>
+
+    <nav>
+      <ul class="navigation">
+        <li>
+          <a  title="Menu" onclick="toggleMenu()">☰ Menu</a>
+        </li>
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a  href="preston.html">Preston</a></li>
+        <li><a href="sodasprings.html">Soda Springs</a></li>
+        <li><a href="fishhaven.html">Fish Haven</a></li>
+        <li><a  href="stormcenter.html">Storm Center</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </nav>
+
+    <main> <aside class="silowp-showcase site-main">
+      <div class="container">
+        <div class="row">
+          
+          <div class="col-xs-12 textcenter-xs flex-xs-middle">
+            <h3 class="summarytittle">Idaho's Most Accurate Forecast </h3>
+            <img src="https://thefamilyhouse.org/wp-content/uploads/parser/state-insurance-fund-idaho-1.gif" alt="Idaho">
+          </div>
+          </div><!-- .col-xs-12 -->
+        </div><!-- .row -->
+      <!-- .container -->
+      </aside>
+      <h1>Town Info</h1>
+      <section class="town_info">
+      </section>
+
+</main>    <aside>
+    <div class="contact">
+      <h2>Contact</h2>
+      <ul class="leftcol">
+        <li></li>
+        <li>123 Fake St.</li>
+        <li>
+          Preston,
+          ID 83263
+        </li>
+        <li>
+          (555) 555-5555
+        </li>
+        <li>
+          info@todayforecast.com
+        </li>
+      </ul>
+     
+  </div></aside>
+
+  
+    <footer>
+      <p> 
+        ©2019 | Todays Forecast | Daniel Wear<br>
+        <span id="today">Friday, 1 March 2019</span><br>
+      </p>
+      <script src="js/storm.js"></script>
+      <script src="js/script.js"></script>
+      <script> var section = document.querySelector('section')
+        var requestURL = 'https://byui-cit230.github.io/weather/data/towndata.json';
+        var request = new XMLHttpRequest();
+        request.open('GET', requestURL);
+        request.responseType = 'json';
+        request.send();
+        request.onload = function() {
+          var townData = request.response;
+          populatetown(townData)
+        }
+      
+        function populatetown(jsonObj) {
+          towns = jsonObj['towns']
+          for (i = 0; i< towns.length; i++) {
+          if (
+            (towns[i].name == 'Preston') || 
+            (towns[i].name == 'Soda Springs') || 
+            (towns[i].name == 'Fish Haven')) {
+         
+            showtowns(towns[i]);
+          }
+       
+        }
+      
+        function showtowns(jsonObj) {
+      
+          var  data = jsonObj
+          var  Article = document.createElement('article')
+          var  H = document.createElement('h2')
+          var  Para1 = document.createElement('h4')
+          var  Para2 = document.createElement('p')
+          var  Para3 = document.createElement('p')
+          var  Para4 = document.createElement('p')
+          var  image = document.createElement('picture')
+      
+           H.innerHTML = data.name
+           Para1.innerHTML = data.motto
+           Para2.innerHTML = '<strong>Year Founded: </strong>' + data.yearFounded
+           Para3.innerHTML = '<strong>Population: </strong>' + data.currentPopulation
+           Para4.innerHTML = '<strong>Average Rain Fall: </strong>' + data.averageRainfall + 'Inches'
+         
+      
+      switch (H.innerHTML) {
+            case 'Preston':
+                image.innerHTML =
+                "<img srcset=\"img/ps.jpg 320w, img/ps.jpg 480w, img/pl.jpg 800w\"  sizes=\"(max-width: 320px) 280px,  (max-width: 480px) 440px, 800px\" src=\"img/pl.jpg\" alt=\"Preston\">"
+              break
+            case 'Soda Springs':
+                 image.innerHTML =
+                 "<img srcset=\"img/ss.jpg 320w, img/ps.jpg 480w, img/sm.jpg 800w\"  sizes=\"(max-width: 320px) 280px,  (max-width: 480px) 440px, 800px\" src=\"img/sl.jpg\" alt=\"Preston\">"
+              break
+      
+            case 'Fish Haven':
+                 image.innerHTML =
+                 "<img srcset=\"img/rs.jpg 320w, img/rs.jpg 480w, img/rm.jpg 800w\"  sizes=\"(max-width: 320px) 280px,  (max-width: 480px) 440px, 800px\" src=\"img/rl.jpg\" alt=\"Preston\">"
+              break
+          }
+      
+           Article.appendChild( H)
+           Article.appendChild( Para1)
+           Article.appendChild( Para2)
+           Article.appendChild( Para3)
+           Article.appendChild( Para4)
+           Article.appendChild( image)
+           section.appendChild( Article)
+        
+        }}
+      </script>
+    </footer>
+  
+
+  
+
+</body></html>
+

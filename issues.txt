@@ -1,0 +1,26 @@
+Town articles not displayed in proper order; should be Preston - Soda Springs - Fish Haven
+
+Event list not displayed.
+
+Multiple HTML validation errors and likewise CSS errors. Also your navigation between pages is not working.
+There should not be a separate css for the Storm Center Page. Since it is an integral part of the weather site, the small medium and large css files for the weather site should be modified to accommodate the portions of the form that are unique.
+flex not used in the small screen view.
+
+Flex used in large view.
+
+First image has a shadow on all views, rest of the images behave properly.
+
+Contact portion of footer is missing from Gallery page.
+Preston page is missing the 5 day forecast.
+
+Also the weather summary should follow the design presented on the large screen view screenshot provided in lesson 5 as the requirement for the town pages
+
+Here is a link to the screenshot:
+https://byui-cit230.github.io/assignments/lesson-05/images/townpage-large-view.pngLinks to an external site.
+
+
+media queries should be in css, not html. The srcset can be implemented with the "vw" specification then the three images. The code looks like this as an example:
+
+<img class="myphoto" src="images/preston.jpg" alt="Sunny Day in Preston Idaho" sizes="100vw" srcset="images/preston200.jpg 200w,
+images/preston400.jpg 400w,
+images/preston800.jpg 800w">

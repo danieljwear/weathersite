@@ -1,0 +1,47 @@
+{ "squadName" : "Avengers",
+  "homeTown" : "New York City",
+  "formed" : 2009,
+  "secretBase" : "STARK TOWER",
+  "active" : true,
+  "members" : [
+    { "name" : "Iron Man",
+      "age" : 42,
+      "secretIdentity" : "Tony Stark",
+      "powers" : [
+        "AI",
+        "Money",
+        "Technology"
+      ]
+    },
+    { "name" : "Hulk",
+      "age" : 39,
+      "secretIdentity" : "Bruce Banner",
+      "powers" : [
+        "Getting Angery",
+        "Can not be killed",
+        "Strength"
+      ]
+    },
+    { "name" : "Thor",
+      "age" : "Unknown",
+      "secretIdentity" : "Thor",
+      "powers" : [
+        "Immortality",
+        "Thunder and lightning",
+        "Powerful Hammer",
+        "Strength", 
+        "Flying"
+      ]
+    },
+    { "name" : "Captain America",
+      "age" : "150",
+      "secretIdentity" : "Steve Rogers",
+      "powers" : [
+     
+        "Sheild",
+        "Strength", 
+        "Integrity"     
+        ]
+    }
+  ]
+}

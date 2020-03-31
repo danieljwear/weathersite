@@ -1,0 +1,68 @@
+/* || general styles */
+
+html {
+  font-family: 'helvetica neue', helvetica, arial, sans-serif;
+}
+
+body {
+  background-image: url("https://images5.alphacoders.com/887/thumb-1920-887355.jpg");
+  background-color: #000;
+  height: 500px;
+  width: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin: 0 auto;
+}
+
+h1, h2 {
+  font-family: 'Faster One', cursive;
+  color:silver;
+}
+
+/* header styles */
+
+h1 {
+  font-size: 4rem;
+  text-align: center;
+}
+
+header p {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 9px 8px #110000;
+  text-align: center;
+}
+
+/* section styles */
+
+section article {
+  width: 33%;
+  float: left;
+  text-shadow: 2px 9px 8px #110000;
+  color: white;
+}
+
+section p {
+    font-weight: bold;
+  margin: 5px 0;
+  text-shadow: 2px 9px 8px #110000;
+  color: white;
+}
+
+section ul {
+    font-weight: bold;
+  margin-top: 0;
+  text-shadow: 2px 9px 8px #110000;
+  color: white;
+}
+
+h2 {
+  font-size: 2.5rem;
+  letter-spacing: -5px;
+  margin-bottom: 10px;
+  text-shadow: 2px 9px 8px #110000;
+  color: white;
+}
